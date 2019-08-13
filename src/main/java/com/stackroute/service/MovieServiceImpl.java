@@ -1,6 +1,6 @@
 package com.stackroute.service;
 
-import com.stackroute.domain.Movies;
+import com.stackroute.domain.Movie;
 import com.stackroute.repository.MoviesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,30 +16,30 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public Movies getMovieById(int id) {
+    public Movie getMovieById(int id) {
         return moviesRepository.findById(id).get();
     }
 
     @Override
-    public Movies saveMovie(Movies movies) {
-        return moviesRepository.save(movies);
+    public Movie saveMovie(Movie movie) {
+        return moviesRepository.save(movie);
     }
 
     @Override
-    public Iterable<Movies> getAllMovies() {
+    public Iterable<Movie> getAllMovies() {
         return moviesRepository.findAll();
     }
 
     @Override
-    public Movies deleteMovieById(int id) {
-        Optional<Movies> optionalMovie = moviesRepository.findById(id);
+    public Movie deleteMovieById(int id) {
+        Optional<Movie> optionalMovie = moviesRepository.findById(id);
         moviesRepository.deleteById(id);
         return optionalMovie.get();
     }
 
     @Override
-    public Movies updateById(Movies movies) {
-        moviesRepository.deleteById(movies.getId());
-        return moviesRepository.save(movies);
+    public Movie updateById(Movie movie) {
+        moviesRepository.deleteById(movie.getId());
+        return moviesRepository.save(movie);
     }
 }

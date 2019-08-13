@@ -1,6 +1,6 @@
 package com.stackroute.service;
 
-import com.stackroute.domain.Movies;
+import com.stackroute.domain.Movie;
 
 public interface MovieService {
 
@@ -8,29 +8,29 @@ public interface MovieService {
      * AbstractMethod to get a Movie By Id
      */
 
-    Movies getMovieById(int id);
+    Movie getMovieById(int id);
 
     /**
      * AbstractMethod to save a Movie
      */
 
-    Movies saveMovie(Movies movie);
+    Movie saveMovie(Movie movie);
 
     /**
      * AbstractMethod to get All the Movies
      */
-    Iterable<Movies> getAllMovies();
+    Iterable<Movie> getAllMovies();
 
     /**
      * AbstractMethod to delete a Movie By Id
      */
 
-    Movies deleteMovieById(int id);
+    Movie deleteMovieById(int id);
 
 
     /**
      * AbstractMethod to  Update a Movie By Id
      */
 
-    Movies updateById(Movies movie);
+    Movie updateById(Movie movie);
 }

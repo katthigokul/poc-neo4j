@@ -11,7 +11,7 @@ import org.neo4j.ogm.annotation.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Movies {
+public class Movie {
     @Id
 
     private int id;
