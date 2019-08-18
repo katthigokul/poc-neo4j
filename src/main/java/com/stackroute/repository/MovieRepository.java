@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * @Repository marks the specific class as a Data Access Object
  */
 @Repository
-public interface MoviesRepository extends Neo4jRepository<Movie, Integer> {
+public interface MovieRepository extends Neo4jRepository<Movie, Integer> {
 }
