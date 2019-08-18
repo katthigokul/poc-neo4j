@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 import java.util.Optional;
 
+/*
+    @Service indicates annotated class is a service which hold business logic in the Service layer
+ */
 @Service
 public class RatingServiceImpl implements RatingService {
     private CriticRepository criticRepository;
